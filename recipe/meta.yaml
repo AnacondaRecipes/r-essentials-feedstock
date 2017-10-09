@@ -1,71 +1,134 @@
 {% set name = "r-essentials" %}
-{% set version = "1.5.2" %}
+{% set version = "1.7.0" %}
+
+{% set r_base_ver = '3.4.2' %}
+{% set notebook_ver = '5.0.0' %}
+{% set r_broom_ver = '0.4.2' %}
+{% set r_caret_ver = '6.0_77' %}
+{% set r_data_table_ver = '1.10.4' %}
+{% set r_dbi_ver = '0.7' %}
+{% set r_dplyr_ver = '0.7.4' %}
+{% set r_forcats_ver = '0.2.0' %}
+{% set r_formatr_ver = '1.5' %}
+{% set r_ggplot2_ver = '2.2.1' %}
+{% set r_glmnet_ver = '2.0_13' %}
+{% set r_haven_ver = '1.1.0' %}
+{% set r_hms_ver = '0.3' %}
+{% set r_httr_ver = '1.3.1' %}
+{% set r_irkernel_ver = '0.8.9' %}
+{% set r_jsonlite_ver = '1.5' %}
+{% set r_lubridate_ver = '1.6.0' %}
+{% set r_magrittr_ver = '1.5' %}
+{% set r_modelr_ver = '0.1.1' %}
+{% set r_plyr_ver = '1.8.4' %}
+{% set r_purrr_ver = '0.2.3' %}
+{% set r_quantmod_ver = '0.4_11' %}
+{% set r_randomforest_ver = '4.6_12' %}
+{% set r_rbokeh_ver = '0.5.0' %}
+{% set r_readr_ver = '1.1.1' %}
+{% set r_readxl_ver = '1.0.0' %}
+{% set r_recommended_ver = '3.4.2' %}
+{% set r_reshape2_ver = '1.4.2' %}
+{% set r_rmarkdown_ver = '1.6' %}
+{% set r_rvest_ver = '0.3.2' %}
+{% set r_shiny_ver = '1.0.5' %}
+{% set r_stringr_ver = '1.2.0' %}
+{% set r_tibble_ver = '1.3.4' %}
+{% set r_tidyr_ver = '0.7.1' %}
+{% set r_tidyverse_ver = '1.1.1' %}
+{% set r_xml2_ver = '1.1.1' %}
+{% set r_zoo_ver = '1.8_0' %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
-build:
-  # r-rbokeh is not available under Windows
-  skip: true  # [win]
-  number: 0
-
 requirements:
-    run:
-        - r-base
-        - r-recommended >=3.3.2
-        - r-ggplot2 >=2.2.0
-        - r-plyr >=1.8.4
-        - r-reshape2 >=1.4.2
-        - r-dplyr >=0.5.0
-        - r-tidyr >=0.6.0
-        - r-caret >=6.0_73
-        - r-randomforest >=4.6_12
-        - r-data.table >=1.10.0
-        - r-quantmod >=0.4_7
-        - r-shiny >=0.14.2
-        - r-rmarkdown >=1.3
-        - r-glmnet >=2.0_5
-        - r-jsonlite >=1.1
-        - r-zoo >=1.7_13
-        - r-irkernel >=0.7.1
-        - r-rbokeh >=0.5.0
-        - r-formatr >=1.4
-        - notebook >=4.2.3
-        - r-tidyverse >=1.0.0
-        - r-dbi >=0.5_1
-        - r-broom >=0.4.1
-        - r-forcats >=0.1.1
-        - r-haven >=1.0.0
-        - r-hms >=0.3
-        - r-httr >=1.2.1
-        - r-jsonlite >=1.1
-        - r-lubridate >=1.6.0
-        - r-magrittr >=1.5
-        - r-modelr >=0.1.0
-        - r-purrr >=0.2.2
-        - r-readr >=1.0.0
-        - r-readxl >=0.1.1
-        - r-rvest >=0.3.2
-        - r-stringr >=1.1.0
-        - r-tibble >=1.2
-        - r-tidyr >=0.6.0
-        - r-xml2 >=1.0.0
+  build:
+    - r-base >={{r_base_ver}}
+    - notebook >={{notebook_ver}}
+    - r-broom >={{r_broom_ver}}
+    - r-caret >={{r_caret_ver}}
+    - r-data.table >={{r_data_table_ver}}
+    - r-dbi >={{r_dbi_ver}}
+    - r-dplyr >={{r_dplyr_ver}}
+    - r-forcats >={{r_forcats_ver}}
+    - r-formatr >={{r_formatr_ver}}
+    - r-ggplot2 >={{r_ggplot2_ver}}
+    - r-glmnet >={{r_glmnet_ver}}
+    - r-haven >={{r_haven_ver}}
+    - r-hms >={{r_hms_ver}}
+    - r-httr >={{r_httr_ver}}
+    - r-irkernel >={{r_irkernel_ver}}
+    - r-jsonlite >={{r_jsonlite_ver}}
+    - r-lubridate >={{r_lubridate_ver}}
+    - r-magrittr >={{r_magrittr_ver}}
+    - r-modelr >={{r_modelr_ver}}
+    - r-plyr >={{r_plyr_ver}}
+    - r-purrr >={{r_purrr_ver}}
+    - r-quantmod >={{r_quantmod_ver}}
+    - r-randomforest >={{r_randomforest_ver}}
+    - r-rbokeh >={{r_rbokeh_ver}}
+    - r-readr >={{r_readr_ver}}
+    - r-readxl >={{r_readxl_ver}}
+    - r-recommended >={{r_recommended_ver}}
+    - r-reshape2 >={{r_reshape2_ver}}
+    - r-rmarkdown >={{r_rmarkdown_ver}}
+    - r-rvest >={{r_rvest_ver}}
+    - r-shiny >={{r_shiny_ver}}
+    - r-stringr >={{r_stringr_ver}}
+    - r-tibble >={{r_tibble_ver}}
+    - r-tidyr >={{r_tidyr_ver}}
+    - r-tidyverse >={{r_tidyverse_ver}}
+    - r-xml2 >={{r_xml2_ver}}
+    - r-zoo >={{r_zoo_ver}}
 
-test:
-  commands:
-    - $R -e "library('ggplot2')"  # [not win]
-    - $R -e "library('tibble')"  # [not win]
-    - "\"%R%\" -e \"library('ggplot2')\""  # [win]
-    - "\"%R%\" -e \"library('tibble')\""  # [win]
+  run:
+    - r-base >={{r_base_ver}}
+    - notebook >={{notebook_ver}}
+    - r-broom >={{r_broom_ver}}
+    - r-caret >={{r_caret_ver}}
+    - r-data.table >={{r_data_table_ver}}
+    - r-dbi >={{r_dbi_ver}}
+    - r-dplyr >={{r_dplyr_ver}}
+    - r-forcats >={{r_forcats_ver}}
+    - r-formatr >={{r_formatr_ver}}
+    - r-ggplot2 >={{r_ggplot2_ver}}
+    - r-glmnet >={{r_glmnet_ver}}
+    - r-haven >={{r_haven_ver}}
+    - r-hms >={{r_hms_ver}}
+    - r-httr >={{r_httr_ver}}
+    - r-irkernel >={{r_irkernel_ver}}
+    - r-jsonlite >={{r_jsonlite_ver}}
+    - r-lubridate >={{r_lubridate_ver}}
+    - r-magrittr >={{r_magrittr_ver}}
+    - r-modelr >={{r_modelr_ver}}
+    - r-plyr >={{r_plyr_ver}}
+    - r-purrr >={{r_purrr_ver}}
+    - r-quantmod >={{r_quantmod_ver}}
+    - r-randomforest >={{r_randomforest_ver}}
+    - r-rbokeh >={{r_rbokeh_ver}}
+    - r-readr >={{r_readr_ver}}
+    - r-readxl >={{r_readxl_ver}}
+    - r-recommended >={{r_recommended_ver}}
+    - r-reshape2 >={{r_reshape2_ver}}
+    - r-rmarkdown >={{r_rmarkdown_ver}}
+    - r-rvest >={{r_rvest_ver}}
+    - r-shiny >={{r_shiny_ver}}
+    - r-stringr >={{r_stringr_ver}}
+    - r-tibble >={{r_tibble_ver}}
+    - r-tidyr >={{r_tidyr_ver}}
+    - r-tidyverse >={{r_tidyverse_ver}}
+    - r-xml2 >={{r_xml2_ver}}
+    - r-zoo >={{r_zoo_ver}}
 
 about:
-    home: https://github.com/conda-forge/r-essentials-feedstock
-    license: Various
-    license_family: Other
-    summary: Some essential packages for working with R. This was migrated from the 'r' channel.
+  summary: "Some essential packages for working with R"
+  license: Various
+  license_family: Other
 
 extra:
   recipe-maintainers:
-    - johanneskoester
     - bgruening
+    - johanneskoester
+    - mingwandroid
