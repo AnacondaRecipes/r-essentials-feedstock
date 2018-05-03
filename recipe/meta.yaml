@@ -62,7 +62,6 @@ requirements:
     - r-reshape2 >={{r_reshape2_ver}}
     - r-rmarkdown >={{r_rmarkdown_ver}}
     - r-shiny >={{r_shiny_ver}}
-    - r-tibble >={{r_tibble_ver}}
     - r-tidyverse >={{r_tidyverse_ver}}
     - r-zoo >={{r_zoo_ver}}
 
