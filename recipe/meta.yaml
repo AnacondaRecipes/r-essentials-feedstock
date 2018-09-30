@@ -45,7 +45,7 @@ package:
 
 requirements:
   build:
-    - r-base >={{r_base_ver}}
+    - r-base
     - notebook >={{notebook_ver}}
     - r-broom >={{r_broom_ver}}
     - r-caret >={{r_caret_ver}}
@@ -84,7 +84,7 @@ requirements:
     - r-zoo >={{r_zoo_ver}}
 
   run:
-    - r-base >={{r_base_ver}}
+    - r-base
     - notebook >={{notebook_ver}}
     - r-broom >={{r_broom_ver}}
     - r-caret >={{r_caret_ver}}
