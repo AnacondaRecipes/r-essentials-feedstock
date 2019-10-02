@@ -24,7 +24,7 @@
 {% set r_purrr_ver = '0.2.5' %}
 {% set r_quantmod_ver = '0.4_13' %}
 {% set r_randomforest_ver = '4.6_14' %}
-{% set r_rbokeh_ver = '0.6.3' %}
+{% set r_rbokeh_ver = '0.5.0' %}
 {% set r_readr_ver = '1.1.1' %}
 {% set r_readxl_ver = '1.1.0' %}
 {% set r_recommended_ver = '3.6.0' %}
